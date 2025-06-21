@@ -1,0 +1,247 @@
+/* Styles globaux */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+    color: white;
+}
+
+header.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #111;
+    padding: 10px 20px;
+}
+
+
+.navbar .logo img {
+    height: 100px; /* Ajuster la taille du logo */
+}
+
+header.navbar nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+header.navbar nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+}
+
+header.navbar nav ul li a.active {
+    border-bottom: 2px solid #E50914;
+}
+.navbar .nav-right {
+    display: flex;
+    gap: 10px;
+}
+
+.navbar .nav-right input {
+    padding: 5px;
+    border: none;
+    border-radius: 3px;
+}
+
+.navbar .nav-right button {
+    padding: 5px 10px;
+    background-color: #E50914;
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.navbar .nav-right button:hover {
+    background-color: darkred;
+}
+
+/* User Menu */
+.user-menu {
+    position: relative;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    background-color: #333;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.user-avatar {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.user-name {
+    font-weight: bold;
+    margin-right: 10px;
+    color: white;
+}
+
+.user-email {
+    font-size: 0.85em;
+    color: #aaa;
+}
+
+.dropdown-icon {
+    margin-left: auto;
+    font-size: 0.8em;
+    color: #aaa;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #222;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    border-radius: 5px;
+    z-index: 10;
+}
+
+.dropdown-menu li {
+    padding: 10px 15px;
+    color: white;
+    cursor: pointer;
+}
+
+.dropdown-menu li:hover {
+    background-color: #333;
+}
+
+.logout-icon {
+    margin-right: 5px;
+    font-size: 1.2em;
+    vertical-align: middle;
+}
+
+.user-menu:hover .dropdown-menu {
+    display: block;
+}
+h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #fff;
+    margin-bottom: 30px;
+}
+
+/* Carte du film */
+.movie-card {
+    background-color: #1e1e1e;
+    border-radius: 8px;
+    padding: 30px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.movie-details {
+    display: flex;
+    gap: 20px;
+}
+
+.movie-image img {
+    width: 200px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.movie-description h2 {
+    color: #009e92;
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.movie-description p {
+    color: #cfcfcf;
+    margin: 5px 0;
+}
+
+/* Tableau */
+.ratings-section h3 {
+    color: #E50914;
+    margin-bottom: 10px;
+}
+
+.rating-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.rating-table th, .rating-table td {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #333;
+}
+
+.rating-table th {
+    background-color: #333;
+    color: #E50914;
+}
+
+.rating-table td {
+    background-color: #1c1c1c;
+    color: #cfcfcf;
+}
+
+.global-rating-section {
+    margin-top: 30px;
+    margin-left: 25%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 50%;
+    background-color: #1e1e1e;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.rating {
+    display: inline-block;
+    margin: 10px 0;
+}
+
+.rating input {
+    margin-right: 10px;
+    width: 20px;
+    height: 20px;
+}
+
+/* Boutons */
+button {
+    background-color: #00bfae;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #009e92;
+}
+
+footer {
+    background-color: #1c1c1c;
+    text-align: center;
+    padding: 20px;
+    color: #e0e0e0;
+    margin-top: 20px;
+}

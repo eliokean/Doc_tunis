@@ -1,0 +1,157 @@
+/* Définir des styles de base */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Section principale */
+.add-film-section {
+    max-width: 800px;
+    margin: 2rem auto;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+}
+
+/* Titre de la section */
+.section-title {
+    text-align: center;
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    color: #333;
+}
+
+/* Fieldset */
+fieldset {
+    border: 1px solid #ccc;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+    background-color: #fafafa;
+}
+
+/* Légende (legend) */
+legend {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #444;
+    margin-bottom: 1rem;
+}
+
+/* Groupe de formulaire */
+.form-group {
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Labels */
+label {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: #555;
+}
+
+/* Champs de formulaire */
+input[type="text"],
+input[type="date"],
+textarea {
+    padding: 0.8rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: #f9f9f9;
+    transition: border 0.3s ease-in-out;
+}
+
+/* Champs : focus */
+input:focus,
+textarea:focus {
+    border-color: #007bff;
+    outline: none;
+    background-color: #fff;
+}
+
+/* Style pour les champs de type file */
+input[type="file"] {
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+    width: 100%;
+    box-sizing: border-box;
+    cursor: pointer;
+    transition: border 0.3s ease-in-out;
+}
+
+/* Champ de type file : focus */
+input[type="file"]:focus {
+    border-color: #007bff;
+    outline: none;
+    background-color: #fff;
+}
+
+
+/* Textarea */
+textarea {
+    resize: vertical;
+}
+
+/* Bouton */
+.bouton {
+    display: block;
+    width: 100%;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 0.8rem 1rem;
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Bouton : hover */
+.bouton:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .add-film-section {
+        padding: 1rem;
+    }
+
+    legend {
+        font-size: 1rem;
+    }
+
+    .form-group {
+        flex-direction: column;
+    }
+
+    label {
+        font-size: 0.9rem;
+    }
+
+    input,
+    textarea {
+        font-size: 0.9rem;
+        padding: 0.6rem;
+    }
+
+    .bouton {
+        font-size: 0.9rem;
+    }
+}

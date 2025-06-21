@@ -1,0 +1,272 @@
+/* Styles globaux */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+    color: white;
+}
+
+header.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #111;
+    padding: 10px 20px;
+}
+
+
+.navbar .logo img {
+    height: 100px; /* Ajuster la taille du logo */
+}
+
+header.navbar nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+header.navbar nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+}
+
+header.navbar nav ul li a.active {
+    border-bottom: 2px solid #E50914;
+}
+.navbar .nav-right {
+    display: flex;
+    gap: 10px;
+}
+
+.navbar .nav-right input {
+    padding: 5px;
+    border: none;
+    border-radius: 3px;
+}
+
+.navbar .nav-right button {
+    padding: 5px 10px;
+    background-color: #E50914;
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.navbar .nav-right button:hover {
+    background-color: darkred;
+}
+
+/* User Menu */
+.user-menu {
+    position: relative;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    background-color: #333;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.user-avatar {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.user-name {
+    font-weight: bold;
+    margin-right: 10px;
+    color: white;
+}
+
+.user-email {
+    font-size: 0.85em;
+    color: #aaa;
+}
+
+.dropdown-icon {
+    margin-left: auto;
+    font-size: 0.8em;
+    color: #aaa;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #222;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    border-radius: 5px;
+    z-index: 10;
+}
+
+.dropdown-menu li {
+    padding: 10px 15px;
+    color: white;
+    cursor: pointer;
+}
+
+.dropdown-menu li:hover {
+    background-color: #333;
+}
+
+.logout-icon {
+    margin-right: 5px;
+    font-size: 1.2em;
+    vertical-align: middle;
+}
+
+.user-menu:hover .dropdown-menu {
+    display: block;
+}
+
+h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #fff;
+    margin-bottom: 30px;
+}
+
+/* Movie card styling */
+.movie-card {
+    background-color: #222; /* Dark card background */
+    border-radius: 10px;
+    display: flex;
+    margin-bottom: 40px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.movie-img {
+    width: 300px;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px 0 0 10px;
+}
+
+.movie-details {
+    padding: 20px;
+    flex-grow: 1;
+}
+
+.movie-details h2 {
+    font-size: 1.8rem;
+    color: #fff; /* Light text for the title */
+    margin-bottom: 15px;
+}
+
+.movie-details p {
+    font-size: 1rem;
+    color: #bbb; /* Slightly lighter text for description */
+    margin-bottom: 10px;
+}
+
+.rating-section {
+    padding: 20px;
+    background-color: #333; /* Dark background for the rating section */
+    border-radius: 0 0 10px 10px;
+}
+
+.rating-section h3 {
+    font-size: 1.5rem;
+    color: #fff;
+    margin-bottom: 15px;
+}
+
+label {
+    display: inline-block;
+    margin-right: 10px;
+    font-size: 1rem;
+    color: #bbb; /* Lighter label text */
+}
+
+.rating {
+    margin-bottom: 20px;
+}
+
+.rating input[type="radio"] {
+    display: none;
+}
+
+.rating label {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background-color: #444; /* Darker background for stars */
+    color: #fff;
+    text-align: center;
+    line-height: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-right: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.rating input[type="radio"]:checked + label {
+    background-color: #f39c12; /* Yellow when selected */
+}
+
+.rating input[type="radio"]:hover + label {
+    background-color: #e67e22; /* Slightly lighter on hover */
+}
+
+button {
+    background-color: #000; /* Black button */
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 100%;
+}
+
+button:hover {
+    background-color: #e67e22; /* Light orange on hover */
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #000;
+    color: #fff;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    .movie-card {
+        flex-direction: column;
+    }
+
+    .movie-img {
+        width: 100%;
+        border-radius: 10px 10px 0 0;
+    }
+
+    .movie-details {
+        padding: 15px;
+    }
+
+    .rating-section {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+}

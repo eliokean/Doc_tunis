@@ -1,0 +1,191 @@
+/* Style général */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    color: white;
+    background-color: #121212;
+    overflow-x: hidden;
+}
+
+/* Header avec effet parallaxe */
+.parallax {
+    background-image: url('/images/cinema_header.jpg');
+    height: 100vh;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    color: white;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.navbar .logo img {
+    height: 80px; /* Ajuster la taille du logo */
+}
+
+.parallax .navbar {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background: rgb(0, 0, 0);
+    padding: 15px 0;
+    z-index: 10;
+}
+
+.parallax .navbar ul {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    margin-left: 900px; /* Déplace les liens vers la droite */
+}
+
+.parallax .navbar ul li a {
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    color: white;
+    transition: color 0.3s ease;
+}
+
+.parallax .navbar ul li a:hover {
+    color: #E50914;
+}
+
+.parallax .header-content {
+    z-index: 1;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8);
+}
+
+.parallax .header-content h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+.parallax .header-content p {
+    font-size: 1.5em;
+}
+
+/* Section Mission */
+.mission {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #222;
+    color: white;
+}
+
+.mission h2 {
+    font-size: 2.5em;
+    color: #E50914;
+    margin-bottom: 20px;
+    position: relative;
+    animation: fadeInDown 1s ease-out;
+}
+
+.mission p {
+    font-size: 1.2em;
+    line-height: 1.8em;
+}
+
+/* Animation */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Section Équipe */
+.team {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #121212;
+}
+
+.team h2 {
+    font-size: 2.5em;
+    color: #E50914;
+    margin-bottom: 30px;
+}
+
+.team-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.team .member {
+    background-color: #222;
+    border-radius: 10px;
+    text-align: center;
+    padding: 20px;
+    width: 250px;
+    transition: transform 0.3s;
+}
+
+.team .member:hover {
+    transform: scale(1.05);
+}
+
+.team .member img {
+    width: 100%;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+.team .member h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #E50914;
+}
+
+.team .member p {
+    font-size: 1.1em;
+    color: #ccc;
+}
+/* Flèche flottante */
+.floating-arrow {
+    position: fixed;
+    bottom: 20px; /* Distance du bas */
+    right: 20px; /* Distance de la droite */
+    width: 60px;
+    height: 60px;
+    background-color: #E50914; /* Couleur de fond (rouge Netflix) */
+    color: white;
+    border-radius: 50%; /* Forme circulaire */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    font-size: 24px; /* Taille de l'icône */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3); /* Ombre pour un effet flottant */
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    z-index: 1000; /* Toujours au-dessus des autres éléments */
+}
+
+.floating-arrow:hover {
+    background-color: #c20810; /* Couleur au survol */
+    transform: scale(1.1); /* Agrandissement au survol */
+    cursor: pointer;
+}
+
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #222;
+    color: #aaa;
+    font-size: 14px;
+}
