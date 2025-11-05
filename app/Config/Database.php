@@ -52,55 +52,55 @@ class Database extends Config
     //     *
     //     * @var array<string, mixed>
     //     */
-        public array $default = [
-            'DSN'        => '',
-            'hostname'   => 'localhost',
-            'username'   => 'postgres',
-            'password'   => '1234',
-            'database'   => 'doc_tunis',
-            'schema'     => 'public',
-            'DBDriver'   => 'Postgre',
-            'DBPrefix'   => '',
-            'pConnect'   => false,
-            'DBDebug'    => true,
-            'charset'    => 'utf8',
-            'swapPre'    => '',
-            'failover'   => [],
-            'port'       => 5432,
-            'dateFormat' => [
-                'date'     => 'Y-m-d',
-                'datetime' => 'Y-m-d H:i:s',
-                'time'     => 'H:i:s',
-            ],
-        ];
+        // public array $default = [
+        //     'DSN'        => '',
+        //     'hostname'   => 'localhost',
+        //     'username'   => 'postgres',
+        //     'password'   => '1234',
+        //     'database'   => 'doc_tunis',
+        //     'schema'     => 'public',
+        //     'DBDriver'   => 'Postgre',
+        //     'DBPrefix'   => '',
+        //     'pConnect'   => false,
+        //     'DBDebug'    => true,
+        //     'charset'    => 'utf8',
+        //     'swapPre'    => '',
+        //     'failover'   => [],
+        //     'port'       => 5432,
+        //     'dateFormat' => [
+        //         'date'     => 'Y-m-d',
+        //         'datetime' => 'Y-m-d H:i:s',
+        //         'time'     => 'H:i:s',
+        //     ],
+        // ];
 
     //    /**
     //     * Sample database connection for SQLSRV.
     //     *
     //     * @var array<string, mixed>
     //     */
-    //    public array $default = [
-    //        'DSN'        => '',
-    //        'hostname'   => 'localhost',
-    //        'username'   => 'root',
-    //        'password'   => 'root',
-    //        'database'   => 'ci4',
-    //        'schema'     => 'dbo',
-    //        'DBDriver'   => 'SQLSRV',
-    //        'DBPrefix'   => '',
-    //        'pConnect'   => false,
-    //        'DBDebug'    => true,
-    //        'charset'    => 'utf8',
-    //        'swapPre'    => '',
-    //        'encrypt'    => false,
-    //        'failover'   => [],
-    //        'port'       => 1433,
-    //        'dateFormat' => [
-    //            'date'     => 'Y-m-d',
-    //            'datetime' => 'Y-m-d H:i:s',
-    //            'time'     => 'H:i:s',
-    //        ],
-    //    ];
+       public array $default = [
+           'DSN'        => '',
+           'hostname'   => '127.0.0.1\SQLServer',
+           'username'   => 'sa',
+           'password'   => '1234',
+           'database'   => 'doc_tunis',
+           'schema'     => 'dbo',
+           'DBDriver'   => 'SQLSRV',
+           'DBPrefix'   => '',
+           'pConnect'   => false,
+           'DBDebug'    => true,
+           'charset'    => 'utf8',
+           'swapPre'    => '',
+           'encrypt'    => false,
+           'failover'   => [],
+           'port'       => 1433,
+           'dateFormat' => [
+               'date'     => 'Y-m-d',
+               'datetime' => 'Y-m-d H:i:s',
+               'time'     => 'H:i:s',
+           ],
+       ];
 
     //    /**
     //     * Sample database connection for OCI8.
