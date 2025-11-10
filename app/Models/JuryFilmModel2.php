@@ -20,3 +20,4 @@ class JuryFilmModel2 extends Model
                     ->findAll();
     }
 }
+ 

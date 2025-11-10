@@ -16,3 +16,4 @@ class RealisateurModel extends Model
         'date_naissance'
     ]; // Colonnes modifiables
 }
+ 

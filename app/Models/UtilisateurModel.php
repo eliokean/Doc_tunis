@@ -7,7 +7,7 @@ class UtilisateurModel extends Model
 {
     protected $table = 'utilisateur';
     protected $primaryKey = 'id_utilisateur';
-    protected $returnType = 'array';
+    protected $returnType = 'array'; 
     protected $allowedFields = ['prenom_utilisateur', 'nom_utilisateur_complet', 'date_naissance', 'email', 'mot_de_passe', 'role'];
 
     protected $validationRules = [
