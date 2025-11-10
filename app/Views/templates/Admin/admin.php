@@ -126,7 +126,7 @@
                     <input type="radio" name="<?= $utilisateur['id_utilisateur']; ?>" value="Responsable_Inspection" <?= $utilisateur['role'] === 'Responsable_Inspection' ? 'checked' : ''; ?> onchange="updateRole(<?= $utilisateur['id_utilisateur']; ?>, 'Responsable_Inspection')">
                 </td>
                 <td>
-                    <input type="radio" name="<?= $utilisateur['id_utilisateur']; ?>" value="President_du_Jury" <?= $utilisateur['role'] === 'President_du_Jury' ? 'checked' : ''; ?> onchange="updateRole(<?= $utilisateur['id_utilisateur']; ?>, 'President_du_Jury')">
+                    <input type="radio" name="<?= $utilisateur['id_utilisateur']; ?>" value="Président_du_Jury" <?= $utilisateur['role'] === 'Président_du_Jury' ? 'checked' : ''; ?> onchange="updateRole(<?= $utilisateur['id_utilisateur']; ?>, 'Président_du_Jury')">
                 </td>
                 <td>
                     <input type="radio" name="<?= $utilisateur['id_utilisateur']; ?>" value="Jury" <?= $utilisateur['role'] === 'Jury' ? 'checked' : ''; ?> onchange="updateRole(<?= $utilisateur['id_utilisateur']; ?>, 'Jury')">
@@ -134,7 +134,7 @@
                 <td>
                     <button class="btn btn-sm btn-warning">Modifier</button>
                     <button class="btn btn-sm btn-danger">Supprimer</button>
-                    <?php if ($utilisateur['role'] === 'President_du_Jury' || $utilisateur['role'] === 'Jury') : ?>
+                    <?php if ($utilisateur['role'] === 'Président_du_Jury' || $utilisateur['role'] === 'Jury') : ?>
                         <button class="btn btn-sm btn-info assign-film-btn" data-jury-id="<?= $utilisateur['id_utilisateur']; ?>" data-jury-name="<?= $utilisateur['prenom_utilisateur']; ?>" data-bs-toggle="modal" data-bs-target="#assign-film-modal">Assigner</button>
                     <?php endif; ?>
                 </td>

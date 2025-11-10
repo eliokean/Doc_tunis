@@ -7,6 +7,7 @@ body {
     color: white;
 }
 
+
 header.navbar {
     display: flex;
     justify-content: space-between;
@@ -20,17 +21,20 @@ header.navbar {
     height: 100px; /* Ajuster la taille du logo */
 }
 
+
 header.navbar nav ul {
     list-style: none;
     display: flex;
     gap: 20px;
 }
 
+
 header.navbar nav ul li a {
     text-decoration: none;
     color: white;
     font-size: 16px;
 }
+
 
 header.navbar nav ul li a.active {
     border-bottom: 2px solid #E50914;
@@ -40,11 +44,13 @@ header.navbar nav ul li a.active {
     gap: 10px;
 }
 
+
 .navbar .nav-right input {
     padding: 5px;
     border: none;
     border-radius: 3px;
 }
+
 
 .navbar .nav-right button {
     padding: 5px 10px;
@@ -55,14 +61,17 @@ header.navbar nav ul li a.active {
     border-radius: 3px;
 }
 
+
 .navbar .nav-right button:hover {
     background-color: darkred;
 }
+
 
 /* User Menu */
 .user-menu {
     position: relative;
 }
+
 
 .user-info {
     display: flex;
@@ -73,6 +82,7 @@ header.navbar nav ul li a.active {
     cursor: pointer;
 }
 
+
 .user-avatar {
     width: 30px;
     height: 30px;
@@ -80,22 +90,26 @@ header.navbar nav ul li a.active {
     margin-right: 10px;
 }
 
+
 .user-name {
     font-weight: bold;
     margin-right: 10px;
     color: white;
 }
 
+
 .user-email {
     font-size: 0.85em;
     color: #aaa;
 }
+
 
 .dropdown-icon {
     margin-left: auto;
     font-size: 0.8em;
     color: #aaa;
 }
+
 
 .dropdown-menu {
     display: none;
@@ -111,21 +125,25 @@ header.navbar nav ul li a.active {
     z-index: 10;
 }
 
+
 .dropdown-menu li {
     padding: 10px 15px;
     color: white;
     cursor: pointer;
 }
 
+
 .dropdown-menu li:hover {
     background-color: #333;
 }
+
 
 .logout-icon {
     margin-right: 5px;
     font-size: 1.2em;
     vertical-align: middle;
 }
+
 
 .user-menu:hover .dropdown-menu {
     display: block;
@@ -137,11 +155,13 @@ header.navbar nav ul li a.active {
     margin: auto;
 }
 
+
 .results-container h1 {
     text-align: center;
     font-size: 28px;
     margin-bottom: 20px;
 }
+
 
 /* Filtres */
 .filters {
@@ -150,10 +170,12 @@ header.navbar nav ul li a.active {
     margin-bottom: 20px;
 }
 
+
 .filters label {
     font-size: 16px;
     margin-right: 5px;
 }
+
 
 .filters select {
     padding: 8px;
@@ -163,12 +185,14 @@ header.navbar nav ul li a.active {
     border-radius: 5px;
 }
 
+
 /* Grille des cartes de films */
 .film-cards-container {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     gap: 20px;
 }
+
 
 .film-card {
     background: #222;
@@ -177,12 +201,15 @@ header.navbar nav ul li a.active {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
     text-align: center;
     transition: transform 0.3s, box-shadow 0.3s;
+    position: relative;
 }
+
 
 .film-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 6px 8px rgba(0, 0, 0, 0.5);
 }
+
 
 .film-card img {
     width: 100%;
@@ -191,17 +218,20 @@ header.navbar nav ul li a.active {
     margin-bottom: 10px;
 }
 
+
 .film-card h2 {
     font-size: 18px;
     margin-bottom: 15px;
     color: white;
 }
 
+
 .film-card p {
     font-size: 14px;
     margin: 5px 0;
     color: #ccc;
 }
+
 
 .film-card .average-note-display {
     display: flex;
@@ -210,23 +240,65 @@ header.navbar nav ul li a.active {
     margin-top: 10px;
 }
 
+
 .film-card .star-rating {
     display: flex;
     gap: 2px;
 }
 
-.note-display span{
 
+.note-display span {
 }
+
 
 .film-card .note-display span {
     color: #E50914;
     font-size: 20px;
 }
 
+
 .film-card .average-note {
     font-weight: bold;
     color: white;
+}
+
+/* Style podium pour les 3 meilleurs films */
+
+.film-card.podium-1 {
+    border: 3px solid gold;
+    transform: scale(1.1);
+    z-index: 3;
+    box-shadow: 0 0 15px gold;
+}
+
+.film-card.podium-2 {
+    border: 3px solid silver;
+    transform: scale(1.05);
+    z-index: 2;
+    box-shadow: 0 0 10px silver;
+}
+
+.film-card.podium-3 {
+    border: 3px solid #cd7f32;
+    transform: scale(1.03);
+    z-index: 1;
+    box-shadow: 0 0 8px #cd7f32;
+}
+
+/* Label numérique sur podium */
+
+.podium-label {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    background: rgba(255, 215, 0, 0.9);
+    color: #fff;
+    font-weight: 700;
+    padding: 8px 12px;
+    border-radius: 50%;
+    font-size: 1.4rem;
+    box-shadow: 0 0 5px rgba(0,0,0,0.2);
+    pointer-events: none;
 }
 
 /* Pied de page */

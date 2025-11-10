@@ -37,7 +37,7 @@ class NoteController extends BaseController
         // Passer les films à la vue
         if($role_jury=== 'Jury'){
             return view('/templates/Membres_jury/note_jury', ['films' => $films]);
-        }elseif ($role_jury === 'President_du_Jury'){
+        }elseif ($role_jury === 'Président_du_Jury'){
             return view('/templates/President_jury/jury_president',['films' => $films]);
         }
     

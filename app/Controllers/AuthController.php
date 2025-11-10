@@ -44,7 +44,7 @@ class AuthController extends Controller
                     return redirect()->to('/dashboard_production'); // Redirige vers la page d'inspection
                 } elseif ($user['role'] === 'Jury'){
                     return redirect()->to('/dashboard_jury'); // Redirige vers la page d'inspection
-                } elseif ($user['role'] === 'President_du_Jury'){
+                } elseif ($user['role'] === 'Président_du_Jury'){
                     return redirect()->to('/dashboard_president'); // Redirige vers la page d'inspection
                 }
                 

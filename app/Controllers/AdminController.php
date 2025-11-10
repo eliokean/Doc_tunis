@@ -72,8 +72,8 @@ class AdminController extends BaseController
         }
 
         // Vérifier si le rôle est "Président du Jury" et qu'un autre utilisateur l'a déjà
-        if ($newRole === 'President_du_Jury') {
-            $existingJuryPresident = $utilisateurModel->where('role', 'President_du_Jury')->first();
+        if ($newRole === 'Président_du_Jury') {
+            $existingJuryPresident = $utilisateurModel->where('role', 'Président_du_Jury')->first();
 
             if ($existingJuryPresident && $existingJuryPresident['id_utilisateur'] != $userId) {
                 return $this->response->setJSON(['success' => false, 'message' => 'Le rôle de Président du Jury est déjà attribué à un autre utilisateur.']);
@@ -100,7 +100,7 @@ class AdminController extends BaseController
         }
     }
 
-    public function assignFilmToJury()
+    public function assignFilmToJury() 
 {
     $utilisateurModel = new \App\Models\UtilisateurModel();
     $filmModel = new \App\Models\FilmModel();
@@ -121,7 +121,7 @@ log_message('debug', 'Données reçues : ' . json_encode($data));
 
     // Vérifier si l'utilisateur est un jury
     $jury = $utilisateurModel->find($juryId);
-    if (!$jury || !in_array($jury['role'], ['President_du_Jury', 'Jury'])) {
+    if (!$jury || !in_array($jury['role'], ['Président_du_Jury', 'Jury'])) {
         return $this->response->setJSON(['success' => false, 'message' => 'L\'utilisateur n\'est pas un jury.']);
     }
 
